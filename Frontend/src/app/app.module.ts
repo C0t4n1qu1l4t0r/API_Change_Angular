@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 
 import { PostModule } from './post/post.module';
 
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './shared/auth.interceptor';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -17,7 +20,13 @@ import { PostModule } from './post/post.module';
     PostModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

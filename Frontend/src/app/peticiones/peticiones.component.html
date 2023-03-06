@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8 order-2 order-md-1">
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-5 col-sm-4" *ngFor="let peticion of peticiones">
+            <img
+              src={{peticion.file}}
+              class="img-fluid w-100"
+              alt="card-horizontal-image"
+            />
+          </div>
+          <div class="col-7 col-sm-8">
+            <div class="card-body" *ngFor="let peticion of peticiones">
+              <h5 class="card-title">{{ peticion.id }}</h5>
+              <p class="card-text">
+                {{ peticion.titulo }}
+              </p>
+              <p class="card-text">
+                <small class="text-muted">{{ peticion.destinatario }}</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-4 order-1 order-md-2">
+      <a class="btn btn-danger" routerLink="/create">Crea una petición</a>
+    </div>
+  </div>
+</div>

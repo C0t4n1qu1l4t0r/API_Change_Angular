@@ -3609,16 +3609,16 @@
         },
         {
             "name": "swagger-api/swagger-ui",
-            "version": "v4.17.0",
+            "version": "v4.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swagger-api/swagger-ui.git",
-                "reference": "ea0ee85ee24e724bbd95d76a8f34d97778a045fe"
+                "reference": "3314d7f7fcef10140543ca01a809ff3b07346b5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/ea0ee85ee24e724bbd95d76a8f34d97778a045fe",
-                "reference": "ea0ee85ee24e724bbd95d76a8f34d97778a045fe",
+                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/3314d7f7fcef10140543ca01a809ff3b07346b5e",
+                "reference": "3314d7f7fcef10140543ca01a809ff3b07346b5e",
                 "shasum": ""
             },
             "type": "library",
@@ -3664,9 +3664,9 @@
             ],
             "support": {
                 "issues": "https://github.com/swagger-api/swagger-ui/issues",
-                "source": "https://github.com/swagger-api/swagger-ui/tree/v4.17.0"
+                "source": "https://github.com/swagger-api/swagger-ui/tree/v4.17.1"
             },
-            "time": "2023-03-01T10:29:25+00:00"
+            "time": "2023-03-06T15:25:30+00:00"
         },
         {
             "name": "symfony/console",
@@ -6494,16 +6494,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.15.0",
+            "version": "2.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "3e8aebbca9f0ae6f618962c4ad514077fd365ab3"
+                "reference": "e864ac957acd66e1565f25efda61e37791a5db0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/3e8aebbca9f0ae6f618962c4ad514077fd365ab3",
-                "reference": "3e8aebbca9f0ae6f618962c4ad514077fd365ab3",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/e864ac957acd66e1565f25efda61e37791a5db0b",
+                "reference": "e864ac957acd66e1565f25efda61e37791a5db0b",
                 "shasum": ""
             },
             "require": {
@@ -6553,7 +6553,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.15.0"
+                "source": "https://github.com/filp/whoops/tree/2.15.1"
             },
             "funding": [
                 {
@@ -6561,7 +6561,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-03T12:00:00+00:00"
+            "time": "2023-03-06T18:09:13+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -7077,16 +7077,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.25",
+            "version": "9.2.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "0e2b40518197a8c0d4b08bc34dfff1c99c508954"
+                "reference": "443bc6912c9bd5b409254a40f4b0f4ced7c80ea1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/0e2b40518197a8c0d4b08bc34dfff1c99c508954",
-                "reference": "0e2b40518197a8c0d4b08bc34dfff1c99c508954",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/443bc6912c9bd5b409254a40f4b0f4ced7c80ea1",
+                "reference": "443bc6912c9bd5b409254a40f4b0f4ced7c80ea1",
                 "shasum": ""
             },
             "require": {
@@ -7108,8 +7108,8 @@
                 "phpunit/phpunit": "^9.3"
             },
             "suggest": {
-                "ext-pcov": "*",
-                "ext-xdebug": "*"
+                "ext-pcov": "PHP extension that provides line coverage",
+                "ext-xdebug": "PHP extension that provides line coverage as well as branch and path coverage"
             },
             "type": "library",
             "extra": {
@@ -7142,7 +7142,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.25"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.26"
             },
             "funding": [
                 {
@@ -7150,7 +7150,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-25T05:32:00+00:00"
+            "time": "2023-03-06T12:58:08+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",

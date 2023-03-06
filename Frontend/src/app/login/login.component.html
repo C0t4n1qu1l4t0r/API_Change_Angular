@@ -1,0 +1,30 @@
+<div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+<div>
+  <form class="p-5 d-flex flex-column">
+    <div class="form-floating my-3">
+      <input
+        type="email"
+        [(ngModel)]="email"
+        class="form-control"
+        name="email"
+        id="floatingInput"
+        placeholder="name@example.com"
+      />
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input
+        type="password"
+        [(ngModel)]="password"
+        class="form-control"
+        name="password"
+        id="floatingPassword"
+        placeholder="Password"
+      />
+      <label for="floatingPassword">Password</label>
+    </div>
+    <button type="submit" class="btn btn-primary w-5 align-self-center" (click)="onSubmit()">
+      Sign in
+    </button>
+  </form>
+</div>

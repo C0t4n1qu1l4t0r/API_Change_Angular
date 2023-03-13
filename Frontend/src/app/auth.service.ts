@@ -14,7 +14,13 @@ export class AuthService {
   }
 
   register(user: any) {
-    return this.http.post(`${this.apiUrl}/register`, user).subscribe();
+    return this.http.post(`${this.apiUrl}/register`, user).pipe(
+      tap((response: any)=>{
+        this.router.navigateByUrl('/home');
+        alert("Usuario registrado correctamente");
+      })
+    ).subscribe();
+
   }
 
   login(user: any) {
@@ -24,6 +30,7 @@ export class AuthService {
         this.token = token;
         localStorage.setItem('token', this.token);
         this.router.navigateByUrl('/home');
+        alert("Has iniciado sesion correctamente");
       })
     ).subscribe();
   }
@@ -35,7 +42,13 @@ export class AuthService {
         'Authorization': `Bearer ${token}`
       })
     };
-    return this.http.post<any>(`${this.apiUrl}/logout`, {}, httpOptions).subscribe();
+    return this.http.post<any>(`${this.apiUrl}/logout`, {}, httpOptions).pipe(
+      tap((response: any) => {
+        localStorage.removeItem('token');
+        this.router.navigateByUrl('/home');
+        alert("La sesión se ha cerrado");
+      })
+    ).subscribe();
   }
 
   getToken() {

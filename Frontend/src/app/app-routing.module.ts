@@ -9,8 +9,14 @@ import { AuthGuard } from './auth.guard';
 import { FormPeticionComponent } from './form-peticion/form-peticion.component';
 
 const routes: Routes = [
-  { path: 'register', component: RegisterComponent },
-  { path: 'login', component: LoginComponent },
+  {
+    path: 'register', component: RegisterComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'login', component: LoginComponent,
+    canActivate: [AuthGuard]
+  },
   { path: 'logout', component: LogoutComponent },
   { path: 'home', component: HomeComponent },
   {
@@ -20,7 +26,7 @@ const routes: Routes = [
   {
     path: 'create',
     component: FormPeticionComponent,
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard]
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
@@ -29,4 +35,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

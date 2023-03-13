@@ -12,7 +12,7 @@ export class FormPeticionComponent {
   descripcion: string;
   destinatario: string;
   category: string;
-  errorMessage: string ="";
+  errorMessage: string = "";
 
   constructor(
     private peticionesService: PeticionesService,
@@ -25,9 +25,8 @@ export class FormPeticionComponent {
   }
 
   enviarFormulario() {
-    if(this.titulo == "" || this.descripcion =="" || this.destinatario =="" || this.category == ""){
-      this.errorMessage= "Revisa que todos los campos estén rellenados"
-      return;
+    if (this.titulo == "" || this.descripcion == "" || this.destinatario == "" || this.category == "") {
+      this.errorMessage = "Revisa que todos los campos estén rellenados"
     }
     this.peticionesService
       .enviarFormulario(
@@ -40,7 +39,8 @@ export class FormPeticionComponent {
         (response) => this.router.navigateByUrl('peticiones'),
         (error) => {
           console.log(error)
-          this.errorMessage = error}
+          this.errorMessage = error
+        }
       );
   }
 }

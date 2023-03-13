@@ -11,21 +11,21 @@ export class FormPeticionComponent {
   titulo: string;
   descripcion: string;
   destinatario: string;
-  category_id: string;
+  category: string;
   errorMessage: string ="";
 
   constructor(
     private peticionesService: PeticionesService,
     private router: Router
   ) {
-    this.category_id = '';
+    this.category = '';
     this.descripcion = '';
     this.destinatario = '';
     this.titulo = '';
   }
 
   enviarFormulario() {
-    if(this.titulo == "" || this.descripcion =="" || this.destinatario =="" || this.category_id == ""){
+    if(this.titulo == "" || this.descripcion =="" || this.destinatario =="" || this.category == ""){
       this.errorMessage= "Revisa que todos los campos estén rellenados"
       return;
     }
@@ -34,7 +34,7 @@ export class FormPeticionComponent {
         this.titulo,
         this.descripcion,
         this.destinatario,
-        this.category_id
+        this.category
       )
       .subscribe(
         (response) => this.router.navigateByUrl('peticiones'),

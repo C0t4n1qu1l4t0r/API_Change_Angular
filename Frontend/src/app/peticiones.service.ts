@@ -21,7 +21,7 @@ export class PeticionesService {
     titulo: string,
     descripcion: string,
     destinatario: string,
-    category_id: string
+    category: string
   ) {
     const token = localStorage.getItem('token');
     const url = 'http://localhost:8000/api/peticiones/store';
@@ -34,7 +34,7 @@ export class PeticionesService {
       titulo,
       descripcion,
       destinatario,
-      category_id,
+      category,
     };
 
     console.log(body);

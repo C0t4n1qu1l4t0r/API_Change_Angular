@@ -12,7 +12,7 @@ export class LogoutComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   async logout() {
-    const token = localStorage.getItem('token');
+    var token = localStorage.getItem('token');
     this.res = await this.authService.logout(token);
   }
 

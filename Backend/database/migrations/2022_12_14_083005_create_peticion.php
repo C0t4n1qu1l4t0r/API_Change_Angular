@@ -28,7 +28,7 @@ return new class extends Migration
             $table->foreign('category_id')
                 ->references('id')
                 ->on('categories');
-            $table->string('file', 255)->default('users/October2022/habitacion-doble.jpg');
+//            $table->string('file', 255)->default('users/October2022/habitacion-doble.jpg');
             $table->timestamps();
         });
     }

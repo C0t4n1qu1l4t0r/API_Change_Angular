@@ -21,7 +21,7 @@ export class PeticionesService {
     titulo: string,
     descripcion: string,
     destinatario: string,
-    category: string
+    category: number
   ) {
     const token = localStorage.getItem('token');
     const url = 'http://localhost:8000/api/peticiones/store';
@@ -38,6 +38,7 @@ export class PeticionesService {
     };
 
     console.log(body);
+    alert('Peticion almacenada correctamente');
     return this.http.post<any>(url, body, httpOptions);
   }
 }

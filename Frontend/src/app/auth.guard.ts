@@ -26,6 +26,7 @@ export class AuthGuard implements CanActivate {
       return true;
     } else {
       this.router.navigate(['/login']);
+      alert('Necesitas estar logueado para poder acceder a esta parte de la aplicacion');
       return false;
     }
   }

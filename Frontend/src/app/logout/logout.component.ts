@@ -13,7 +13,9 @@ export class LogoutComponent {
 
   async logout() {
     var token = localStorage.getItem('token');
+    localStorage.removeItem('token');
     this.res = await this.authService.logout(token);
+
   }
 
   isAuthenticated() {

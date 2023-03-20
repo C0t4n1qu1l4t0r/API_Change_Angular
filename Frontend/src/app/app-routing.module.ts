@@ -11,13 +11,11 @@ import { FormPeticionComponent } from './form-peticion/form-peticion.component';
 const routes: Routes = [
   {
     path: 'register', component: RegisterComponent,
-    canActivate: [AuthGuard]
   },
   {
     path: 'login', component: LoginComponent,
-    canActivate: [AuthGuard]
   },
-  { path: 'logout', component: LogoutComponent },
+  { path: 'logout', component: LogoutComponent, canActivate: [AuthGuard] },
   { path: 'home', component: HomeComponent },
   {
     path: 'peticiones',

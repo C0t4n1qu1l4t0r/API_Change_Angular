@@ -11,21 +11,21 @@ export class FormPeticionComponent {
   titulo: string;
   descripcion: string;
   destinatario: string;
-  category: string;
+  category: number;
   errorMessage: string = "";
 
   constructor(
     private peticionesService: PeticionesService,
     private router: Router
   ) {
-    this.category = '';
+    this.category = 0;
     this.descripcion = '';
     this.destinatario = '';
     this.titulo = '';
   }
 
   enviarFormulario() {
-    if (this.titulo == "" || this.descripcion == "" || this.destinatario == "" || this.category == "") {
+    if (this.titulo == "" || this.descripcion == "" || this.destinatario == "" || this.category == 0) {
       this.errorMessage = "Revisa que todos los campos estén rellenados"
     }
     this.peticionesService
